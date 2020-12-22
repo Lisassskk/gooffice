@@ -7,9 +7,9 @@ import (
 	_c "strings"
 	_d "time"
 
-	_f "gitee.com/yu_sheng/gooffice"
-	_bb "gitee.com/yu_sheng/gooffice/schema/soo/dml/spreadsheetDrawing"
-	_ff "gitee.com/yu_sheng/gooffice/schema/soo/ofc/sharedTypes"
+	_f "gitee.com/gooffice/gooffice"
+	_bb "gitee.com/gooffice/gooffice/schema/soo/dml/spreadsheetDrawing"
+	_ff "gitee.com/gooffice/gooffice/schema/soo/ofc/sharedTypes"
 )
 
 func NewCT_ExternalDefinedName() *CT_ExternalDefinedName {

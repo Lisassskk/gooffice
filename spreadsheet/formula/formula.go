@@ -16,12 +16,12 @@ import (
 	_ee "time"
 	_dd "unicode"
 
-	_bc "gitee.com/yu_sheng/gooffice"
-	_feb "gitee.com/yu_sheng/gooffice/internal/mergesort"
-	_ec "gitee.com/yu_sheng/gooffice/internal/wildcard"
-	_bg "gitee.com/yu_sheng/gooffice/spreadsheet/format"
-	_bb "gitee.com/yu_sheng/gooffice/spreadsheet/reference"
-	_a "gitee.com/yu_sheng/gooffice/spreadsheet/update"
+	_bc "gitee.com/gooffice/gooffice"
+	_feb "gitee.com/gooffice/gooffice/internal/mergesort"
+	_ec "gitee.com/gooffice/gooffice/internal/wildcard"
+	_bg "gitee.com/gooffice/gooffice/spreadsheet/format"
+	_bb "gitee.com/gooffice/gooffice/spreadsheet/reference"
+	_a "gitee.com/gooffice/gooffice/spreadsheet/update"
 )
 
 // String returns a string representation for Bool.

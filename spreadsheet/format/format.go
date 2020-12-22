@@ -13,7 +13,7 @@ package format
 import (
 	_g "bytes"
 	_b "fmt"
-	_d "gitee.com/yu_sheng/gooffice"
+	_d "gitee.com/gooffice/gooffice"
 	_c "io"
 	_ea "math"
 	_ce "strconv"

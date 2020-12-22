@@ -4,8 +4,8 @@ import (
 	_b "encoding/xml"
 	_g "fmt"
 
-	_ba "gitee.com/yu_sheng/gooffice"
-	_a "gitee.com/yu_sheng/gooffice/schema/purl.org/dc/elements"
+	_ba "gitee.com/gooffice/gooffice"
+	_a "gitee.com/gooffice/gooffice/schema/purl.org/dc/elements"
 )
 
 func NewPeriod() *Period { _be := &Period{}; return _be }

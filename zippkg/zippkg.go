@@ -11,10 +11,10 @@ import (
 	_cf "strings"
 	_f "time"
 
-	_ae "gitee.com/yu_sheng/gooffice"
-	_ge "gitee.com/yu_sheng/gooffice/algo"
-	_ag "gitee.com/yu_sheng/gooffice/common/tempstorage"
-	_g "gitee.com/yu_sheng/gooffice/schema/soo/pkg/relationships"
+	_ae "gitee.com/gooffice/gooffice"
+	_ge "gitee.com/gooffice/gooffice/algo"
+	_ag "gitee.com/gooffice/gooffice/common/tempstorage"
+	_g "gitee.com/gooffice/gooffice/schema/soo/pkg/relationships"
 )
 
 // RelationsPathFor returns the relations path for a given filename.

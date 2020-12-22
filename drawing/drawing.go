@@ -1,10 +1,10 @@
 package drawing
 
 import (
-	_d "gitee.com/yu_sheng/gooffice"
-	_a "gitee.com/yu_sheng/gooffice/color"
-	_g "gitee.com/yu_sheng/gooffice/measurement"
-	_c "gitee.com/yu_sheng/gooffice/schema/soo/dml"
+	_d "gitee.com/gooffice/gooffice"
+	_a "gitee.com/gooffice/gooffice/color"
+	_g "gitee.com/gooffice/gooffice/measurement"
+	_c "gitee.com/gooffice/gooffice/schema/soo/dml"
 )
 
 // Properties returns the run's properties.

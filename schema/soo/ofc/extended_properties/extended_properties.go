@@ -3,8 +3,8 @@ package extended_properties
 import (
 	_e "encoding/xml"
 
-	_bd "gitee.com/yu_sheng/gooffice"
-	_f "gitee.com/yu_sheng/gooffice/schema/soo/ofc/docPropsVTypes"
+	_bd "gitee.com/gooffice/gooffice"
+	_f "gitee.com/gooffice/gooffice/schema/soo/ofc/docPropsVTypes"
 )
 
 func NewCT_VectorVariant() *CT_VectorVariant {

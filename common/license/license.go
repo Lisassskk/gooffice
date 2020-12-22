@@ -22,7 +22,7 @@ import (
 	_adf "strings"
 	_c "time"
 
-	_gc "gitee.com/yu_sheng/gooffice/common"
+	_gc "gitee.com/gooffice/gooffice/common"
 )
 
 const (

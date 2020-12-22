@@ -4,7 +4,7 @@ import (
 	_b "encoding/xml"
 	_g "fmt"
 
-	_a "gitee.com/yu_sheng/gooffice"
+	_a "gitee.com/gooffice/gooffice"
 )
 
 // ValidateWithPath validates the CT_Rel and its children, prefixing error messages with path

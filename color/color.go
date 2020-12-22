@@ -3,7 +3,7 @@ package color
 import (
 	_g "fmt"
 
-	_c "gitee.com/yu_sheng/gooffice"
+	_c "gitee.com/gooffice/gooffice"
 )
 
 var LightSkyBlue = Color{0x87, 0xCE, 0xFA, 255, false}

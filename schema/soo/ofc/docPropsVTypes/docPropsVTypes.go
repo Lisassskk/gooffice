@@ -7,8 +7,8 @@ import (
 	_a "strconv"
 	_d "time"
 
-	_e "gitee.com/yu_sheng/gooffice"
-	_f "gitee.com/yu_sheng/gooffice/schema/soo/ofc/sharedTypes"
+	_e "gitee.com/gooffice/gooffice"
+	_f "gitee.com/gooffice/gooffice/schema/soo/ofc/sharedTypes"
 )
 
 func (_ebdf ST_VectorBaseType) Validate() error { return _ebdf.ValidateWithPath("") }

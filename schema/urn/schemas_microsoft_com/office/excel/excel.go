@@ -5,8 +5,8 @@ package excel
 import (
 	_ef "encoding/xml"
 	_d "fmt"
-	_f "gitee.com/yu_sheng/gooffice"
-	_b "gitee.com/yu_sheng/gooffice/schema/soo/ofc/sharedTypes"
+	_f "gitee.com/gooffice/gooffice"
+	_b "gitee.com/gooffice/gooffice/schema/soo/ofc/sharedTypes"
 )
 
 func (_gbg ST_ObjectType) MarshalXMLAttr(name _ef.Name) (_ef.Attr, error) {

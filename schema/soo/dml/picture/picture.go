@@ -3,8 +3,8 @@ package picture
 import (
 	_c "encoding/xml"
 
-	_g "gitee.com/yu_sheng/gooffice"
-	_f "gitee.com/yu_sheng/gooffice/schema/soo/dml"
+	_g "gitee.com/gooffice/gooffice"
+	_f "gitee.com/gooffice/gooffice/schema/soo/dml"
 )
 
 func NewCT_PictureNonVisual() *CT_PictureNonVisual {

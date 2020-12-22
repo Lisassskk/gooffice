@@ -5,9 +5,9 @@ package pml
 import (
 	_d "encoding/xml"
 	_gc "fmt"
-	_de "gitee.com/yu_sheng/gooffice"
-	_ad "gitee.com/yu_sheng/gooffice/schema/soo/dml"
-	_c "gitee.com/yu_sheng/gooffice/schema/soo/ofc/sharedTypes"
+	_de "gitee.com/gooffice/gooffice"
+	_ad "gitee.com/gooffice/gooffice/schema/soo/dml"
+	_c "gitee.com/gooffice/gooffice/schema/soo/ofc/sharedTypes"
 	_dc "strconv"
 	_g "time"
 )

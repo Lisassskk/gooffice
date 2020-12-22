@@ -11,7 +11,7 @@ import (
 	_ad "math/rand"
 	_ae "sync"
 
-	_ea "gitee.com/yu_sheng/gooffice/common/tempstorage"
+	_ea "gitee.com/gooffice/gooffice/common/tempstorage"
 )
 
 func _eg(_dc int) (string, error) {

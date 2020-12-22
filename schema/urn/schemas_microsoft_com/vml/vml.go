@@ -5,12 +5,12 @@ import (
 	_e "fmt"
 	_gg "strconv"
 
-	_fa "gitee.com/yu_sheng/gooffice"
-	_c "gitee.com/yu_sheng/gooffice/schema/soo/ofc/sharedTypes"
-	_cd "gitee.com/yu_sheng/gooffice/schema/soo/wml"
-	_d "gitee.com/yu_sheng/gooffice/schema/urn/schemas_microsoft_com/office/excel"
-	_gc "gitee.com/yu_sheng/gooffice/schema/urn/schemas_microsoft_com/office/powerpoint"
-	_cf "gitee.com/yu_sheng/gooffice/schema/urn/schemas_microsoft_com/office/word"
+	_fa "gitee.com/gooffice/gooffice"
+	_c "gitee.com/gooffice/gooffice/schema/soo/ofc/sharedTypes"
+	_cd "gitee.com/gooffice/gooffice/schema/soo/wml"
+	_d "gitee.com/gooffice/gooffice/schema/urn/schemas_microsoft_com/office/excel"
+	_gc "gitee.com/gooffice/gooffice/schema/urn/schemas_microsoft_com/office/powerpoint"
+	_cf "gitee.com/gooffice/gooffice/schema/urn/schemas_microsoft_com/office/word"
 )
 
 type AG_OfficeShapeAttributes struct {

@@ -7,7 +7,7 @@ import (
 	_gd "os"
 	_b "strings"
 
-	_gc "gitee.com/yu_sheng/gooffice/common/tempstorage"
+	_gc "gitee.com/gooffice/gooffice/common/tempstorage"
 )
 
 // Open opens file from disk according to a path

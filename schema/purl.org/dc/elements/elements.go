@@ -4,7 +4,7 @@ import (
 	_e "encoding/xml"
 	_f "fmt"
 
-	_ff "gitee.com/yu_sheng/gooffice"
+	_ff "gitee.com/gooffice/gooffice"
 )
 
 func (_c *Any) MarshalXML(e *_e.Encoder, start _e.StartElement) error {

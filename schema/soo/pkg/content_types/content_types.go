@@ -5,7 +5,7 @@ import (
 	_b "fmt"
 	_dc "regexp"
 
-	_f "gitee.com/yu_sheng/gooffice"
+	_f "gitee.com/gooffice/gooffice"
 )
 
 // Validate validates the CT_Default and its children

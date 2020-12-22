@@ -7,8 +7,8 @@ import (
 	_cd "strconv"
 	_c "time"
 
-	_ff "gitee.com/yu_sheng/gooffice"
-	_a "gitee.com/yu_sheng/gooffice/schema/soo/ofc/sharedTypes"
+	_ff "gitee.com/gooffice/gooffice"
+	_a "gitee.com/gooffice/gooffice/schema/soo/ofc/sharedTypes"
 )
 
 func ParseUnionST_PositivePercentage(s string) (ST_PositivePercentage, error) {

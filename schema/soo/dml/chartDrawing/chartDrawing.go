@@ -5,8 +5,8 @@ import (
 	_aa "fmt"
 	_d "strconv"
 
-	_g "gitee.com/yu_sheng/gooffice"
-	_f "gitee.com/yu_sheng/gooffice/schema/soo/dml"
+	_g "gitee.com/gooffice/gooffice"
+	_f "gitee.com/gooffice/gooffice/schema/soo/dml"
 )
 
 func NewEG_ObjectChoices() *EG_ObjectChoices { _gbd := &EG_ObjectChoices{}; return _gbd }

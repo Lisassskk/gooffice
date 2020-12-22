@@ -4,7 +4,7 @@ import (
 	_fa "encoding/xml"
 	_d "fmt"
 
-	_a "gitee.com/yu_sheng/gooffice"
+	_a "gitee.com/gooffice/gooffice"
 )
 
 // ValidateWithPath validates the CT_Schema and its children, prefixing error messages with path

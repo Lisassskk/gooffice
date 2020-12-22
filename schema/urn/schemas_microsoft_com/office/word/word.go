@@ -5,7 +5,7 @@ import (
 	_ce "fmt"
 	_c "strconv"
 
-	_cg "gitee.com/yu_sheng/gooffice"
+	_cg "gitee.com/gooffice/gooffice"
 )
 
 func (_de *Anchorlock) MarshalXML(e *_d.Encoder, start _d.StartElement) error {

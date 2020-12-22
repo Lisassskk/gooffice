@@ -4,10 +4,10 @@ import (
 	_fd "encoding/xml"
 	_b "fmt"
 
-	_bf "gitee.com/yu_sheng/gooffice"
-	_fe "gitee.com/yu_sheng/gooffice/schema/soo/ofc/sharedTypes"
-	_ba "gitee.com/yu_sheng/gooffice/schema/urn/schemas_microsoft_com/office/excel"
-	_g "gitee.com/yu_sheng/gooffice/schema/urn/schemas_microsoft_com/vml"
+	_bf "gitee.com/gooffice/gooffice"
+	_fe "gitee.com/gooffice/gooffice/schema/soo/ofc/sharedTypes"
+	_ba "gitee.com/gooffice/gooffice/schema/urn/schemas_microsoft_com/office/excel"
+	_g "gitee.com/gooffice/gooffice/schema/urn/schemas_microsoft_com/vml"
 )
 
 type Container struct {

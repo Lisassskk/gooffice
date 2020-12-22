@@ -6,9 +6,9 @@ import (
 	_d "strconv"
 	_ed "time"
 
-	_b "gitee.com/yu_sheng/gooffice"
-	_f "gitee.com/yu_sheng/gooffice/schema/soo/ofc/docPropsVTypes"
-	_eb "gitee.com/yu_sheng/gooffice/schema/soo/ofc/sharedTypes"
+	_b "gitee.com/gooffice/gooffice"
+	_f "gitee.com/gooffice/gooffice/schema/soo/ofc/docPropsVTypes"
+	_eb "gitee.com/gooffice/gooffice/schema/soo/ofc/sharedTypes"
 )
 
 func NewProperties() *Properties {

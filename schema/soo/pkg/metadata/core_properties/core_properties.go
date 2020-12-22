@@ -5,7 +5,7 @@ import (
 	_b "fmt"
 	_e "time"
 
-	_ec "gitee.com/yu_sheng/gooffice"
+	_ec "gitee.com/gooffice/gooffice"
 )
 
 func (_ad *CoreProperties) UnmarshalXML(d *_gg.Decoder, start _gg.StartElement) error {

@@ -5,10 +5,10 @@ package chart
 import (
 	_b "encoding/xml"
 	_aa "fmt"
-	_dc "gitee.com/yu_sheng/gooffice"
-	_f "gitee.com/yu_sheng/gooffice/schema/soo/dml"
-	_c "gitee.com/yu_sheng/gooffice/schema/soo/dml/chartDrawing"
-	_g "gitee.com/yu_sheng/gooffice/schema/soo/ofc/sharedTypes"
+	_dc "gitee.com/gooffice/gooffice"
+	_f "gitee.com/gooffice/gooffice/schema/soo/dml"
+	_c "gitee.com/gooffice/gooffice/schema/soo/dml/chartDrawing"
+	_g "gitee.com/gooffice/gooffice/schema/soo/ofc/sharedTypes"
 	_a "regexp"
 	_bd "strconv"
 )

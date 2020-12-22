@@ -5,8 +5,8 @@ import (
 	_c "fmt"
 	_ae "strconv"
 
-	_af "gitee.com/yu_sheng/gooffice"
-	_ca "gitee.com/yu_sheng/gooffice/schema/soo/dml"
+	_af "gitee.com/gooffice/gooffice"
+	_ca "gitee.com/gooffice/gooffice/schema/soo/dml"
 )
 
 func (_beb *CT_CTName) UnmarshalXML(d *_d.Decoder, start _d.StartElement) error {

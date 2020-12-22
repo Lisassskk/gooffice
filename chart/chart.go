@@ -4,12 +4,12 @@ import (
 	_d "fmt"
 	_gd "math/rand"
 
-	_f "gitee.com/yu_sheng/gooffice"
-	_ef "gitee.com/yu_sheng/gooffice/color"
-	_ge "gitee.com/yu_sheng/gooffice/drawing"
-	_e "gitee.com/yu_sheng/gooffice/measurement"
-	_ga "gitee.com/yu_sheng/gooffice/schema/soo/dml"
-	_g "gitee.com/yu_sheng/gooffice/schema/soo/dml/chart"
+	_f "gitee.com/gooffice/gooffice"
+	_ef "gitee.com/gooffice/gooffice/color"
+	_ge "gitee.com/gooffice/gooffice/drawing"
+	_e "gitee.com/gooffice/gooffice/measurement"
+	_ga "gitee.com/gooffice/gooffice/schema/soo/dml"
+	_g "gitee.com/gooffice/gooffice/schema/soo/dml/chart"
 )
 
 // AreaChart is an area chart that has a shaded area underneath a curve.

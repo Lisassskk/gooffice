@@ -5,8 +5,8 @@ import (
 	_f "fmt"
 	_e "strconv"
 
-	_gg "gitee.com/yu_sheng/gooffice"
-	_be "gitee.com/yu_sheng/gooffice/schema/soo/ofc/sharedTypes"
+	_gg "gitee.com/gooffice/gooffice"
+	_be "gitee.com/gooffice/gooffice/schema/soo/ofc/sharedTypes"
 )
 
 // ValidateWithPath validates the CT_MCS and its children, prefixing error messages with path

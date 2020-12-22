@@ -4,8 +4,8 @@ import (
 	_b "encoding/xml"
 	_af "fmt"
 
-	_d "gitee.com/yu_sheng/gooffice"
-	_e "gitee.com/yu_sheng/gooffice/schema/soo/dml"
+	_d "gitee.com/gooffice/gooffice"
+	_e "gitee.com/gooffice/gooffice/schema/soo/dml"
 )
 
 // ValidateWithPath validates the LockedCanvas and its children, prefixing error messages with path

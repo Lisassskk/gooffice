@@ -5,8 +5,8 @@ import (
 	_cf "fmt"
 	_ca "strconv"
 
-	_f "gitee.com/yu_sheng/gooffice"
-	_b "gitee.com/yu_sheng/gooffice/schema/soo/dml"
+	_f "gitee.com/gooffice/gooffice"
+	_b "gitee.com/gooffice/gooffice/schema/soo/dml"
 )
 
 // ValidateWithPath validates the CT_Shape and its children, prefixing error messages with path
