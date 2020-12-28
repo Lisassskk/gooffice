@@ -1,24 +1,15 @@
-/
-// As an example, the same value of 1.2345 can be displayed as:
-// - "1" with format "0"
-// - "1.2" with format "0.0"
-// - "1.23" with format "0.00"
-// - "1.235" with format "0.000"
-// - "123%" with format "0%"
-// - "1 23/100" with fornat "0 0/100"
-// - "1.23E+00" with format "0.00E+00"
-// - "29:37:41s" with format `[h]:mm:ss"s"`
 package format
 
 import (
 	_g "bytes"
 	_b "fmt"
-	_d "gitee.com/gooffice/gooffice"
 	_c "io"
 	_ea "math"
 	_ce "strconv"
 	_bb "strings"
 	_cd "time"
+
+	_d "gitee.com/gooffice/gooffice"
 )
 
 func _eb(_cga float64, _bg Format, _ba bool) string {

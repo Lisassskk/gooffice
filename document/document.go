@@ -1,16 +1,3 @@
-/*
-
-Package document provides creation, reading, and writing of ECMA 376 Open
-Office XML documents.
-
-Example:
-
-	doc := document.New()
-	para := doc.AddParagraph()
-	run := para.AddRun()
-	run.SetText("foo")
-	doc.SaveToFile("foo.docx")
-*/
 package document
 
 import (
@@ -890,6 +877,9 @@ func (_fgcgg Style) X() *_ag.CT_Style { return _fgcgg._gade }
 // TableBorders allows manipulation of borders on a table.
 type TableBorders struct{ _egbeb *_ag.CT_TblBorders }
 
+// SetConformance sets conformance attribute of the document
+// as one of these values from gitee.com/gooffice/gooffice/schema/soo/ofc/sharedTypes:
+// ST_ConformanceClassUnset, ST_ConformanceClassStrict or ST_ConformanceClassTransitional.
 func (_agegd Document) SetConformance(conformanceAttr _dc.ST_ConformanceClass) {
 	_agegd._bbgg.ConformanceAttr = conformanceAttr
 }
@@ -1021,6 +1011,9 @@ func _fbd(_daa *_ag.CT_Tbl, _fgbad, _ddfc map[int64]int64) {
 	}
 }
 
+// SetHeadingLevel sets a heading level and style based on the level to a
+// paragraph.  The default styles for a new unioffice document support headings
+// from level 1 to 8.
 func (_cdfec ParagraphProperties) SetHeadingLevel(idx int) {
 	_cdfec.SetStyle(_af.Sprintf("\u0048e\u0061\u0064\u0069\u006e\u0067\u0025d", idx))
 	if _cdfec._cfdd.NumPr == nil {
@@ -5317,6 +5310,9 @@ func (_aaaf RunProperties) SetKerning(size _bf.Distance) {
 	_aaaf._ddda.Kern.ValAttr.ST_UnsignedDecimalNumber = _f.Uint64(uint64(size / _bf.HalfPoint))
 }
 
+// SetStrict is a shortcut for document.SetConformance,
+// as one of these values from gitee.com/gooffice/gooffice/schema/soo/ofc/sharedTypes:
+// ST_ConformanceClassUnset, ST_ConformanceClassStrict or ST_ConformanceClassTransitional.
 func (_bfff Document) SetStrict(strict bool) {
 	if strict {
 		_bfff._bbgg.ConformanceAttr = _dc.ST_ConformanceClassStrict

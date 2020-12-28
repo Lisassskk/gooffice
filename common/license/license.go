@@ -1,4 +1,3 @@
-// Package license helps manage commercial licenses and check if they are valid for the version of unidoc used.
 package license
 
 import (
@@ -26,7 +25,7 @@ import (
 )
 
 const (
-	LicenseTierUnlicensed = "unlicensed"
+	LicenseTierUnlicensed = "\u0075\u006e\u006c\u0069\u0063\u0065\u006e\u0073\u0065\u0064"
 	LicenseTierCommunity  = "\u0063o\u006d\u006d\u0075\u006e\u0069\u0074y"
 	LicenseTierIndividual = "\u0069\u006e\u0064\u0069\u0076\u0069\u0064\u0075\u0061\u006c"
 	LicenseTierBusiness   = "\u0062\u0075\u0073\u0069\u006e\u0065\u0073\u0073"
@@ -94,6 +93,7 @@ func (_dge *LicenseKey) TypeToString() string {
 	return "\u0043\u006fm\u006d\u0065\u0072\u0063\u0069\u0061\u006c\u0020\u004c\u0069\u0063\u0065\u006e\u0073\u0065\u0020\u002d\u0020\u0042\u0075\u0073\u0069ne\u0073\u0073"
 }
 
+// LegacyLicense holds the old-style unioffice license information.
 type LegacyLicense struct {
 	Name        string
 	Signature   string `json:",omitempty"`
@@ -141,12 +141,12 @@ func SetLegacyLicenseKey(s string) error {
 	_fag.ExpiresAt = _bfa.Expiration
 	_fag.CreatorName = "\u0055\u006e\u0069\u0044\u006f\u0063\u0020\u0073\u0075p\u0070\u006f\u0072\u0074"
 	_fag.CreatorEmail = "\u0073\u0075\u0070\u0070\u006f\u0072\u0074\u0040\u0075\u006e\u0069\u0064o\u0063\u002e\u0069\u006f"
-	_fag.GoOffice = true
+	_fag.UniOffice = true
 	_gccb = &_fag
 	return nil
 }
 
-// LicenseKey represents a license key for GoOffice.
+// LicenseKey represents a license key for UniOffice.
 type LicenseKey struct {
 	LicenseId    string  `json:"license_id"`
 	CustomerId   string  `json:"customer_id"`
@@ -159,7 +159,7 @@ type LicenseKey struct {
 	CreatorName  string  `json:"creator_name"`
 	CreatorEmail string  `json:"creator_email"`
 	UniPDF       bool    `json:"unipdf"`
-	GoOffice     bool    `json:"gooffice"`
+	UniOffice    bool    `json:"unioffice"`
 	Trial        bool    `json:"trial"`
 }
 
@@ -191,7 +191,6 @@ func GetLicenseKey() *LicenseKey {
 	_ag := *_gccb
 	return &_ag
 }
-
 func _de(_ccd string) (LicenseKey, error) {
 	var _gge LicenseKey
 	_gcf, _dd := _ea(_ff, _cc, _ccd)
@@ -308,7 +307,7 @@ func (_cef *LicenseKey) Validate() error {
 	if len(_cef.CreatorEmail) < 1 {
 		return _gd.Errorf("\u0069\u006e\u0076\u0061\u006c\u0069\u0064\u0020\u006c\u0069c\u0065\u006e\u0073\u0065\u003a\u0020\u0043r\u0065\u0061\u0074\u006f\u0072\u0020\u0065\u006d\u0061\u0069\u006c")
 	}
-	if !_cef.GoOffice {
+	if !_cef.UniOffice {
 		return _gd.Errorf("\u0069\u006e\u0076\u0061\u006c\u0069\u0064\u0020\u006c\u0069\u0063\u0065\u006e\u0073\u0065\u003a\u0020\u0054\u0068\u0069s\u0020\u0055\u006e\u0069\u0044\u006f\u0063\u0020\u006be\u0079\u0020\u0069\u0073\u0020\u0069\u006e\u0076\u0061\u006c\u0069\u0064\u0020f\u006f\u0072\u0020\u0055\u006e\u0069O\u0066\u0066\u0069c\u0065\u002e")
 	}
 	return nil

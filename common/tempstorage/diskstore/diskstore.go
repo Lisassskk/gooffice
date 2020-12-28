@@ -1,5 +1,3 @@
-// Package diskstore implements tempStorage interface
-// by using disk as a storage
 package diskstore
 
 import (

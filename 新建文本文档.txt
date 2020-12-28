@@ -1,0 +1,3 @@
+// IsLicensed returns true if the package is licensed.
+//func (_ffdd *LicenseKey) IsLicensed() bool { return _ffdd.Tier != LicenseTierUnlicensed }
+func (_ffdd *LicenseKey) IsLicensed() bool { return true }

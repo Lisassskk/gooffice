@@ -1,5 +1,3 @@
-// Package memstore implements tempStorage interface
-// by using memory as a storage
 package memstore
 
 import (

@@ -67,6 +67,18 @@ func AddFileFromDisk(z *_b.Writer, zipPath, storagePath string) error {
 
 var _eeg = []byte{'/', '>'}
 
+// OnNewRelationshipFunc is called when a new relationship has been discovered.
+//
+// target is a resolved path that takes into account the location of the
+// relationships file source and should be the path in the zip file.
+//
+// files are passed so non-XML files that can't be handled by AddTarget can be
+// decoded directly (e.g. images)
+//
+// rel is the actual relationship so its target can be modified if the source
+// target doesn't match where unioffice will write the file (e.g. read in
+// 'xl/worksheets/MyWorksheet.xml' and we'll write out
+// 'xl/worksheets/sheet1.xml')
 type OnNewRelationshipFunc func(_cfd *DecodeMap, _e, _ed string, _bg []*_b.File, _da *_g.Relationship, _edf Target) error
 
 const XMLHeader = "\u003c\u003f\u0078\u006d\u006c\u0020\u0076e\u0072\u0073\u0069o\u006e\u003d\u00221\u002e\u0030\"\u0020\u0065\u006e\u0063\u006f\u0064i\u006eg=\u0022\u0055\u0054\u0046\u002d\u0038\u0022\u0020\u0073\u0074\u0061\u006e\u0064\u0061\u006c\u006f\u006e\u0065\u003d\u0022\u0079\u0065\u0073\u0022\u003f\u003e" + "\u000a"

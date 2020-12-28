@@ -491,6 +491,8 @@ func (_ccc TableRow) SetHeight(m _fbd.Distance) {
 	_ccc._cag.HAttr = _bb.ST_Coordinate{ST_CoordinateUnqualified: &_gce}
 }
 
+// Pages returns total number of pages which are saved by the text editor which produced the document.
+// For unioffice created documents, it is 0.
 func (_ecf AppProperties) Pages() int32 {
 	if _ecf._eff.Pages != nil {
 		return *_ecf._eff.Pages
@@ -505,6 +507,8 @@ func (_bfcg TableCol) SetWidth(m _fbd.Distance) {
 }
 func (_fg CustomProperties) setProperty(_cbba *_beb.CT_Property) { _fg.setPropertyHelper(_cbba, false) }
 
+// Company returns the name of the company that created the document.
+// For unioffice created documents, it defaults to gitee.com/gooffice/gooffice
 func (_ffc AppProperties) Company() string {
 	if _ffc._eff.Company != nil {
 		return *_ffc._eff.Company
@@ -1276,6 +1280,8 @@ func (_afbb Relationships) CopyRelationship(idAttr string) (Relationship, bool) 
 	return Relationship{}, false
 }
 
+// Application returns the name of the application that created the document.
+// For unioffice created documents, it defaults to gitee.com/gooffice/gooffice
 func (_abg AppProperties) Application() string {
 	if _abg._eff.Application != nil {
 		return *_abg._eff.Application
