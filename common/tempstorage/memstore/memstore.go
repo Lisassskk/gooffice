@@ -1,112 +1,32 @@
-package memstore
 
-import (
-	_e "encoding/hex"
-	_df "errors"
-	_da "fmt"
-	_c "io"
-	_d "io/ioutil"
-	_ad "math/rand"
-	_ae "sync"
-
-	_ea "gitee.com/gooffice/gooffice/common/tempstorage"
-)
-
-func _eg(_dc int) (string, error) {
-	_bd := make([]byte, _dc)
-	if _, _cc := _ad.Read(_bd); _cc != nil {
-		return "", _cc
-	}
-	return _e.EncodeToString(_bd), nil
-}
-
-// Read reads from the underlying memDataCell in order to implement Reader interface
-func (_f *memFile) Read(p []byte) (int, error) {
-	_ab := _f._ee
-	_g := _f._ag._bf
-	_ce := int64(len(p))
-	if _ce > _g {
-		_ce = _g
-		p = p[:_ce]
-	}
-	if _ab >= _g {
-		return 0, _c.EOF
-	}
-	_ff := _ab + _ce
-	if _ff >= _g {
-		_ff = _g
-	}
-	_fa := copy(p, _f._ag._de[_ab:_ff])
-	_f._ee = _ff
-	return _fa, nil
-}
-
-// SetAsStorage sets temp storage as a memory storage
-func SetAsStorage()          { _agb := memStorage{_b: _ae.Map{}}; _ea.SetAsStorage(&_agb) }
-func _cge(_ge string) string { _dec, _ := _eg(6); return _ge + _dec }
-
-type memStorage struct{ _b _ae.Map }
-type memDataCell struct {
-	_bc string
-	_de []byte
-	_bf int64
-}
-
-// TempFile creates a new empty file in the storage and returns it
-func (_dd *memStorage) TempFile(dir, pattern string) (_ea.File, error) {
-	_eb := dir + "\u002f" + _cge(pattern)
-	_faa := &memDataCell{_bc: _eb, _de: []byte{}}
-	_ga := &memFile{_ag: _faa}
-	_dd._b.Store(_eb, _faa)
-	return _ga, nil
-}
-
-// TempDir creates a name for a new temp directory using a pattern argument
-func (_ca *memStorage) TempDir(pattern string) (string, error) { return _cge(pattern), nil }
-
-type memFile struct {
-	_ag *memDataCell
-	_ee int64
-}
-
-// Write writes to the end of the underlying memDataCell in order to implement Writer interface
-func (_gb *memFile) Write(p []byte) (int, error) {
-	_gb._ag._de = append(_gb._ag._de, p...)
-	_gb._ag._bf += int64(len(p))
-	return len(p), nil
-}
-
-// Close is not applicable in this implementation
-func (_fe *memFile) Close() error { return nil }
-
-// Open returns tempstorage File object by name
-func (_ac *memStorage) Open(path string) (_ea.File, error) {
-	_fef, _ec := _ac._b.Load(path)
-	if !_ec {
-		return nil, _df.New(_da.Sprintf("\u0043\u0061\u006eno\u0074\u0020\u006f\u0070\u0065\u006e\u0020\u0074\u0068\u0065\u0020\u0066\u0069\u006c\u0065\u0020\u0025\u0073", path))
-	}
-	return &memFile{_ag: _fef.(*memDataCell)}, nil
-}
-
-// RemoveAll removes all files according to the dir argument prefix
-func (_agg *memStorage) RemoveAll(dir string) error {
-	_agg._b.Range(func(_gf, _db interface{}) bool { _agg._b.Delete(_gf); return true })
-	return nil
-}
+package memstore ;import (_c "encoding/hex";_e "errors";_gf "fmt";_eb "gitee.com/gooffice/gooffice/common/tempstorage";_g "io";_fb "io/ioutil";_d "math/rand";_fc "sync";);
 
 // Name returns the filename of the underlying memDataCell
-func (_cd *memFile) Name() string { return _cd._ag._bc }
+func (_b *memFile )Name ()string {return _b ._ga ._bd };
+
+// TempDir creates a name for a new temp directory using a pattern argument
+func (_gad *memStorage )TempDir (pattern string )(string ,error ){return _bg (pattern ),nil };
+
+// Read reads from the underlying memDataCell in order to implement Reader interface
+func (_a *memFile )Read (p []byte )(int ,error ){_gg :=_a ._de ;_fg :=_a ._ga ._fbe ;_gfe :=int64 (len (p ));if _gfe > _fg {_gfe =_fg ;p =p [:_gfe ];};if _gg >=_fg {return 0,_g .EOF ;};_dc :=_gg +_gfe ;if _dc >=_fg {_dc =_fg ;};_dg :=copy (p ,_a ._ga ._cd [_gg :_dc ]);_a ._de =_dc ;return _dg ,nil ;};
+
+// Open returns tempstorage File object by name
+func (_ce *memStorage )Open (path string )(_eb .File ,error ){_ced ,_bf :=_ce ._fd .Load (path );if !_bf {return nil ,_e .New (_gf .Sprintf ("\u0043\u0061\u006eno\u0074\u0020\u006f\u0070\u0065\u006e\u0020\u0074\u0068\u0065\u0020\u0066\u0069\u006c\u0065\u0020\u0025\u0073",path ));};return &memFile {_ga :_ced .(*memDataCell )},nil ;};
+
+// Close is not applicable in this implementation
+func (_ebg *memFile )Close ()error {return nil };
 
 // Add reads a file from a disk and adds it to the storage
-func (_cg *memStorage) Add(path string) error {
-	_, _agf := _cg._b.Load(path)
-	if _agf {
-		return nil
-	}
-	_bg, _dag := _d.ReadFile(path)
-	if _dag != nil {
-		return _dag
-	}
-	_cg._b.Store(path, &memDataCell{_bc: path, _de: _bg, _bf: int64(len(_bg))})
-	return nil
-}
+func (_ab *memStorage )Add (path string )error {_ ,_gb :=_ab ._fd .Load (path );if _gb {return nil ;};_cf ,_aa :=_fb .ReadFile (path );if _aa !=nil {return _aa ;};_ab ._fd .Store (path ,&memDataCell {_bd :path ,_cd :_cf ,_fbe :int64 (len (_cf ))});return nil ;};
+
+// Write writes to the end of the underlying memDataCell in order to implement Writer interface
+func (_fe *memFile )Write (p []byte )(int ,error ){_fe ._ga ._cd =append (_fe ._ga ._cd ,p ...);_fe ._ga ._fbe +=int64 (len (p ));return len (p ),nil ;};type memDataCell struct{_bd string ;_cd []byte ;_fbe int64 ;};func _ee (_af int )(string ,error ){_ca :=make ([]byte ,_af );if _ ,_aad :=_d .Read (_ca );_aad !=nil {return "",_aad ;};return _c .EncodeToString (_ca ),nil ;};
+
+// RemoveAll removes all files according to the dir argument prefix
+func (_fbef *memStorage )RemoveAll (dir string )error {_fbef ._fd .Range (func (_bb ,_ec interface{})bool {_fbef ._fd .Delete (_bb );return true });return nil ;};type memFile struct{_ga *memDataCell ;_de int64 ;};
+
+// SetAsStorage sets temp storage as a memory storage
+func SetAsStorage (){_ggg :=memStorage {_fd :_fc .Map {}};_eb .SetAsStorage (&_ggg )};type memStorage struct{_fd _fc .Map };
+
+// TempFile creates a new empty file in the storage and returns it
+func (_gfef *memStorage )TempFile (dir ,pattern string )(_eb .File ,error ){_be :=dir +"\u002f"+_bg (pattern );_bfc :=&memDataCell {_bd :_be ,_cd :[]byte {}};_da :=&memFile {_ga :_bfc };_gfef ._fd .Store (_be ,_bfc );return _da ,nil ;};func _bg (_ff string )string {_cb ,_ :=_ee (6);return _ff +_cb };

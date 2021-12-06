@@ -14,7 +14,7 @@ go get -u gitee.com\gooffice\gooffice
 
 examples
 ```
-https://github.com/unidoc/unioffice-examples
+https://gitee.com/gooffice/gooffice-examples
 ```
 无需   licenseKey   和 init()
 

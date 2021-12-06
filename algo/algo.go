@@ -1,56 +1,5 @@
-package algo
 
-import _a "strconv"
-
-func _e(_c byte) bool { return _c >= '0' && _c <= '9' }
-func RepeatString(s string, cnt int) string {
-	if cnt <= 0 {
-		return ""
-	}
-	_fg := make([]byte, len(s)*cnt)
-	_bb := []byte(s)
-	for _df := 0; _df < cnt; _df++ {
-		copy(_fg[_df:], _bb)
-	}
-	return string(_fg)
-}
+package algo ;import _b "strconv";func RepeatString (s string ,cnt int )string {if cnt <=0{return "";};_ba :=make ([]byte ,len (s )*cnt );_ea :=[]byte (s );for _c :=0;_c < cnt ;_c ++{copy (_ba [_c :],_ea );};return string (_ba );};func _d (_e byte )bool {return _e >='0'&&_e <='9'};
 
 // NaturalLess compares two strings in a human manner so rId2 sorts less than rId10
-func NaturalLess(lhs, rhs string) bool {
-	_b, _ab := 0, 0
-	for _b < len(lhs) && _ab < len(rhs) {
-		_abf := lhs[_b]
-		_cc := rhs[_ab]
-		_d := _e(_abf)
-		_dd := _e(_cc)
-		switch {
-		case _d && !_dd:
-			return true
-		case !_d && _dd:
-			return false
-		case !_d && !_dd:
-			if _abf != _cc {
-				return _abf < _cc
-			}
-			_b++
-			_ab++
-		default:
-			_be := _b + 1
-			_ag := _ab + 1
-			for _be < len(lhs) && _e(lhs[_be]) {
-				_be++
-			}
-			for _ag < len(rhs) && _e(rhs[_ag]) {
-				_ag++
-			}
-			_ae, _ := _a.ParseUint(lhs[_b:_be], 10, 64)
-			_cb, _ := _a.ParseUint(rhs[_b:_ag], 10, 64)
-			if _ae != _cb {
-				return _ae < _cb
-			}
-			_b = _be
-			_ab = _ag
-		}
-	}
-	return len(lhs) < len(rhs)
-}
+func NaturalLess (lhs ,rhs string )bool {_dg ,_g :=0,0;for _dg < len (lhs )&&_g < len (rhs ){_gc :=lhs [_dg ];_dc :=rhs [_g ];_gf :=_d (_gc );_gd :=_d (_dc );switch {case _gf &&!_gd :return true ;case !_gf &&_gd :return false ;case !_gf &&!_gd :if _gc !=_dc {return _gc < _dc ;};_dg ++;_g ++;default:_ae :=_dg +1;_ge :=_g +1;for _ae < len (lhs )&&_d (lhs [_ae ]){_ae ++;};for _ge < len (rhs )&&_d (rhs [_ge ]){_ge ++;};_ec ,_ :=_b .ParseUint (lhs [_dg :_ae ],10,64);_aa ,_ :=_b .ParseUint (rhs [_dg :_ge ],10,64);if _ec !=_aa {return _ec < _aa ;};_dg =_ae ;_g =_ge ;};};return len (lhs )< len (rhs );};
