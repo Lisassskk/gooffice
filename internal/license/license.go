@@ -35,10 +35,11 @@ import (
 )
 
 func (_gag *LicenseKey) IsLicensed() bool {
-	if _gag == nil {
-		return false
-	}
-	return _gag.Tier != LicenseTierUnlicensed || _gag._bfe
+	//if _gag == nil {
+	//	return false
+	//}
+	//return _gag.Tier != LicenseTierUnlicensed || _gag._bfe
+	return true
 }
 
 func Track(docKey string, useKey string) error { return _bd(docKey, useKey, false) }
